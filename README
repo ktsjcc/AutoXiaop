@@ -1,0 +1,38 @@
+###################################################################################################
+            _____                    _____                _____                   _______         #
+         /\    \                  /\    \              /\    \                 /::\    \          #
+        /::\    \                /::\____\            /::\    \               /::::\    \         #
+       /::::\    \              /:::/    /            \:::\    \             /::::::\    \        #
+      /::::::\    \            /:::/    /              \:::\    \           /::::::::\    \       #
+     /:::/\:::\    \          /:::/    /                \:::\    \         /:::/~~\:::\    \      #
+    /:::/__\:::\    \        /:::/    /                  \:::\    \       /:::/    \:::\    \     #
+   /::::\   \:::\    \      /:::/    /                   /::::\    \     /:::/    / \:::\    \    #
+  /::::::\   \:::\    \    /:::/    /      _____        /::::::\    \   /:::/____/   \:::\____\   #
+ /:::/\:::\   \:::\    \  /:::/____/      /\    \      /:::/\:::\    \ |:::|    |     |:::|    |  #
+/:::/  \:::\   \:::\____\|:::|    /      /::\____\    /:::/  \:::\____\|:::|____|     |:::|    |  #
+\::/    \:::\  /:::/    /|:::|____\     /:::/    /   /:::/    \::/    / \:::\    \   /:::/    /   #
+ \/____/ \:::\/:::/    /  \:::\    \   /:::/    /   /:::/    / \/____/   \:::\    \ /:::/    /    #
+          \::::::/    /    \:::\    \ /:::/    /   /:::/    /             \:::\    /:::/    /     #
+           \::::/    /      \:::\    /:::/    /   /:::/    /               \:::\__/:::/    /      #
+           /:::/    /        \:::\__/:::/    /    \::/    /                 \::::::::/    /       #
+          /:::/    /          \::::::::/    /      \/____/                   \::::::/    /        #
+         /:::/    /            \::::::/    /                                  \::::/    /         #
+        /:::/    /              \::::/    /                                    \::/____/          #
+        \::/    /                \::/____/                                      ~~                #
+         \/____/                  ~~                                                              #
+###################################################################################################
+
+1. It is used for automatically distributing files to other servers which are defined in the configuration.
+2. Before Using, you should rename the send.conf.template file to send.conf then editing the infomation inside.
+3. Then executing the install.sh file to finish the installation process.
+4. Be careful, there may cause a warning when executing the install.sh file, cause the AUTO is based on the Expect and TCL tool.
+   which means the installation process will detective whether they have been installed properly. If not will ask you to install the   m automatically or mannually.    
+5. When you need HELP infomation, you could use the -h option for getting help information.
+6. The timeout of the execution in other servers have been set to 3600 seconds which means if the command running more than 3600 sec   onds you may not get the result.
+
+
+
+CONTACT INFO: 
+GITHUB: https://github.com/ktsjcc
+
+                                                                                         

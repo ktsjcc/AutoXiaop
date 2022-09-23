@@ -1,0 +1,52 @@
+#!/bin/bash
+
+#import functions lib
+. $HOME/xiaop/conf/func.cfg
+
+num=1
+
+fileName=$1
+
+confPath=$HOME/xiaop
+
+if [ -f $confPath/send.conf ];then
+	echo "" > /dev/null;
+else
+	echo "send.conf file is not existed..."
+	exit;
+fi
+max=$(egrep "^server" $confPath/send.conf|wc -l)
+cmd=$(egrep "^cm" $confPath/send.conf|awk -F: -va=2 '{print $a}')
+echo $cmd > ./.tmp.sh; chmod +x .tmp.sh;
+
+
+if [ $# -gt 2 ];then
+	echo "more than two args;for usage info enter -h"
+	exit;
+elif [ $# -eq 2 ];then
+	#if [ "$1" == "-x" ]; then
+	#	echo "TODO"
+
+	#manually allocate the config
+	#if [ "$1" == "-c" ];then
+		
+	#else
+	#	echo "wrong argument"
+	#	exit;
+	#fi
+	echo ""
+elif [ $# -eq 1 ]; then
+	if [ "$1" == "-h" ]; then
+	#TODO 需要补充-h的内容
+		echo "help----"
+		
+	else
+		
+		 execAuto
+	
+	fi
+elif [ $# -eq 0 ]; then
+	execAuto
+else
+	echo "" >/dev/null
+fi
