@@ -9,6 +9,7 @@ if [ $? -eq 0 ];then
 	#mkdir -p /usr/share/AutoXiaop/bin;  cp -a ./auto /usr/share/AutoXiaop/bin/auto
 	#mkdir -p /usr/share/AutoXiaop/lib;  cp -a ./func.cfg /usr/share/AutoXiaop/lib/func.cfg
 	sed -i "s|$(grep "PATH=" $bashProfile)|$(grep "PATH=" $bashProfile):$HOME/xiaop|g" $bashProfile
+        echo \alias auto="$HOME/xiaop/bin/auto|grep -v password" >> $bashProfile
 	echo ">>installation finished, go to : $HOME/xiaop<<"
 else
 	read -p "lack of dependencies=======>[expect], automatically install by using yum?[Y/N]:" res
