@@ -1,11 +1,7 @@
 #!/bin/bash
-
 #import functions lib
 . $HOME/xiaop/lib/func.cfg
-
-num=1
-
-fileName=$1
+. $HOME/xiaop/lib/vars.cfg
 
 confPath=$HOME/xiaop
 
@@ -17,13 +13,15 @@ else
 fi
 max=$(egrep "^server" $confPath/send.conf|wc -l)
 cmd=$(egrep "^cm" $confPath/send.conf|awk -F: -va=2 '{print $a}')
-echo $cmd > ./.tmp.sh; chmod +x .tmp.sh;
+echo $cmd > $tmpFile && chmod +x $tmpFile;
 
 
-if [ $# -gt 2 ];then
-	echo "more than two args;for usage info enter -h"
-	exit;
-elif [ $# -eq 2 ];then
+#if [ $# -gt 2 ];
+#	then
+#		echo "more than two args;for usage info enter -h"
+#		exit;
+#if [ $# -eq 2 ];
+#	then
 	#if [ "$1" == "-x" ]; then
 	#	echo "TODO"
 
@@ -34,19 +32,21 @@ elif [ $# -eq 2 ];then
 	#	echo "wrong argument"
 	#	exit;
 	#fi
-	echo ""
-elif [ $# -eq 1 ]; then
-	if [ "$1" == "-h" ]; then
-	#TODO 需要补充-h的内容
-		echo "help----"
+#		echo ""
+if [ $# -eq 1 ]; 
+	then
+		if [ "$1" == "-h" ]; then
+		#TODO 需要补充-h的内容
+			echo "usage: auto [file name]"
 		
-	else
-		
-		 execAuto
+		else
+			echo "sending file name: $1"
+		 	execAuto $1;
 	
-	fi
-elif [ $# -eq 0 ]; then
-	execAuto
+		fi
+elif [ $# -eq 0 ]; 
+	then
+		execAuto
 else
-	echo "" >/dev/null
+		echo "" >/dev/null;
 fi
