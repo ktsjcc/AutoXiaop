@@ -1,21 +1,21 @@
 #!/bin/bash
 
-. $HOME/xiaop/lib/vars.cfg
-. $HOME/xiaop/lib/func.cfg
+. $HOME/AutoXiaop/lib/vars.cfg
+. $HOME/AutoXiaop/lib/func.cfg
 
 expect -v &> /dev/null;
 
 if [ $? -eq 0 ];then
 	echo "expect and tcl have been installed in your server, so you do not need to install again."
 	installation;
-	#chmod +x $HOME/xiaop/bin/auto;
-	#grep "$HOME/xiaop/bin" $bashProfile &> /dev/null
+	#chmod +x $HOME/AutoXiaop/bin/auto;
+	#grep "$HOME/AutoXiaop/bin" $bashProfile &> /dev/null
 	#if [ $? -eq 0 ]; then
 	#	echo "" > /dev/null;
 	#else
 	
-	#	sed -i "s|$(grep "PATH=" $bashProfile)|$(grep "PATH=" $bashProfile):$HOME/xiaop/bin|g" $bashProfile
-	#	echo ">>installation finished, go to : $HOME/xiaop<<"
+	#	sed -i "s|$(grep "PATH=" $bashProfile)|$(grep "PATH=" $bashProfile):$HOME/AutoXiaop/bin|g" $bashProfile
+	#	echo ">>installation finished, go to : $HOME/AutoXiaop<<"
 	#	exec bash --login
 	#	exit;
 	#fi
