@@ -1,9 +1,9 @@
 #!/bin/bash
 #import functions lib
-. $HOME/xiaop/lib/func.cfg
-. $HOME/xiaop/lib/vars.cfg
+. $HOME/AutoXiaop/lib/func.cfg
+. $HOME/AutoXiaop/lib/vars.cfg
 
-confPath=$HOME/xiaop
+confPath=$HOME/AutoXiaop
 
 if [ -f $confPath/send.conf ];then
 	echo "" > /dev/null;
