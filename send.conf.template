@@ -5,5 +5,5 @@
 #server  app    8.8.8.8  11q2w3e4        /home/app/
 
 #COMMAND
-#cm:ip addr |grep ens|grep inet|awk -v x=2 '{print $x}'|awk -F/ -v y=1 '{print $y}';
+#cm:/usr/sbin/ip addr |grep ens|grep inet|awk -v x=2 '{print $x}'|awk -F/ -v y=1 '{print $y}';
 #cm:touch a.txt;
