@@ -24,7 +24,12 @@ else
 	if [ "$(tr "[:lower:]" "[:upper:]" <<<"$res")" == "Y" ]; then
 
 		sudo yum install -y expect;
-		installation;
+		if [ $? -eq 0 ]; then
+                installation;
+                else
+                        echo "<<installation failed>>"
+                        exit;
+                fi
 
 	elif [ "$(tr "[:lower:]" "[:upper:]" <<<"$res")" == "N" ]; then
 		
